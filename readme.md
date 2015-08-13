@@ -6,8 +6,10 @@ and it may be imported into already existing SASS stylesheets.
 A fully functioning demo can be accessed here (better to access it via a mobile
 device as standard browsers may show some glitches): [DEMO](http://codepen.io/iivanoo/full/WvWXqR/)
 
-The example comes with Typicons 1.9.1 (but it can work without it as well).
+The example comes with Typicons (but it can work without it as well).
+```html
   <link rel="stylesheet" type="text/css" href="lib/typicons/typicons.min.css">
+```html
 
 Below you can find a screenshot of the opened menu.
 ![Screenshot](https://raw.githubusercontent.com/iivanoo/Off-canvas-mobile-menu/master/screenshot.png)
