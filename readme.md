@@ -13,4 +13,5 @@ Below you can find a screenshot of the opened menu.
 ![Screenshot](https://raw.githubusercontent.com/iivanoo/Off-canvas-mobile-menu/master/screenshot.png)
 
 For any comment or advice, you can contact me via [email](mailto:ivanomalavolta@gmail.com)
+
 Here you can find any other information about me: [http://www.ivanomalavolta.com](http://www.ivanomalavolta.com)
