@@ -9,7 +9,7 @@ device as standard browsers may show some glitches): [DEMO](http://codepen.io/ii
 The example comes with Typicons (but it can work without it as well).
 ```html
   <link rel="stylesheet" type="text/css" href="lib/typicons/typicons.min.css">
-```html
+```
 
 Below you can find a screenshot of the opened menu.
 ![Screenshot](https://raw.githubusercontent.com/iivanoo/Off-canvas-mobile-menu/master/screenshot.png)
