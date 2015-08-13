@@ -10,7 +10,7 @@ The example comes with Typicons 1.9.1 (but it can work without it as well).
   <link rel="stylesheet" type="text/css" href="lib/typicons/typicons.min.css">
 
 Below you can find a screenshot of the opened menu.
-![Screenshot](./screenshot.png:large)
+![Screenshot](https://raw.githubusercontent.com/iivanoo/Off-canvas-mobile-menu/master/screenshot.png)
 
 For any comment or advice, you can contact me via [email](mailto:ivanomalavolta@gmail.com)
 Here you can find any other information about me: [http://www.ivanomalavolta.com](http://www.ivanomalavolta.com)
