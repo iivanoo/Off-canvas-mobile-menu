@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+$background-image: "../img/menubackground.jpg";
+
+@font-face {
+	font-family:'sourcesans';
+	src: url("../fonts/SourceSansPro-Light.ttf") format("truetype");
+}
+
+#main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.displaynone {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scrollable {
+   -webkit-overflow-scrolling: touch;
+}
+
+.not_scrollable {
+	-webkit-overflow-scrolling: auto;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Here we import the style for the off canvas menu */
+@import 'menu';

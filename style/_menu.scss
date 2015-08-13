@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* code adapted from http://tympanus.net/codrops/2013/12/18/perspective-page-view-navigation/ */
+
+#perspective {
+	width: 100%;
+	height: 100%;
+}
+
+#container {
+	background: #fff;
+	min-height: 100%;
+	position: relative;
+	outline: 1px solid rgba(0,0,0,0);
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+#container::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgba(0,0,0,0.2);
+	/* the transition delay of the height needs to be synced with the container transition time */
+	-webkit-transition: opacity 0.4s, height 0s 0.4s;
+}
+
+/* Modal view */
+#perspective.modalview {
+	position: fixed;
+	-webkit-perspective: 1500px;
+}
+
+.modalview #container {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+}
+
+.animate #container::after {
+	height: 100%;
+	-webkit-transition: opacity 0.4s;
+	z-index: 11; // it must cover everything in the main view
+}
+
+/* Outer Nav */
+.menu-nav {
+	position: absolute;
+	height: auto;
+	font-size: 2em;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	-webkit-transform: translateY(-50%);
+	-webkit-transform-style: preserve-3d;
+}
+
+.menu-nav div {
+	font-family: 'sourcesans';
+	display: block;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	font-weight: 100;
+	margin: 0 0 30px 0;
+	color: #fff;
+	-webkit-transition: color 0.4s;
+	-webkit-transform-style: preserve-3d;
+}
+
+/* Effect Rotate Left */
+.effect-rotateleft {
+	background-image: url($background-image);
+	background-size: cover;
+}
+
+.effect-rotateleft #container {
+	-webkit-transition: -webkit-transform 0.4s;
+	-webkit-transform-origin: 0% 50%;
+}
+
+.effect-rotateleft #container::after {
+	background: rgba(255,255,255,0.6);
+}
+
+.effect-rotateleft.animate #container {
+	-webkit-transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
+	transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
+}
+
+.effect-rotateleft .menu-nav div {
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+}
+
+.effect-rotateleft.animate .menu-nav div {
+	opacity: 1;
+	-webkit-transform: translateX(0) translateZ(0);
+}
+
+.effect-rotateleft.animate .menu-nav div:nth-child(2) {
+	-webkit-transition-delay: 0.04s;
+}
+
+.effect-rotateleft.animate .menu-nav div:nth-child(3) {
+	-webkit-transition-delay: 0.08s;
+}
+
+.effect-rotateleft.animate .menu-nav div:nth-child(4) {
+	-webkit-transition-delay: 0.16s;
+}
+
+.effect-rotateleft.animate .menu-nav div:nth-child(5) {
+	-webkit-transition-delay: 0.20s;
+}
+
+.effect-rotateleft.animate .menu-nav div:nth-child(6) {
+	-webkit-transition-delay: 0.24s;
+}
+
+.menu-icon {
+	margin-right: 5%;
+	line-height: 1;
+}
+
+@media screen and (max-width: 31em), screen and (max-height: 36.2em) {
+	.menu-nav, .menu-nav div {
+		font-size: 1.1em;
+	}
+}
